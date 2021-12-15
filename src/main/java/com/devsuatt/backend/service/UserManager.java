@@ -31,8 +31,8 @@ public class UserManager implements IUserService {
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     // Bir metodun belirli bir iş kümesini sırasıyla gerçekleştirmesini garanti etmek
     // isteyebiliriz, bu tür durumlarda Transactional anotasyonunu kullanırız.
-    // veritabanında herhangi bir değişiklik yapılmayacağı transactionlarda readOnly kullanılır
-    // Propagation.SUPPORTS:Eğer bir transaction var ise o transaction u kullanır,
+    // veritabanında herhangi bir değişiklik yapılmayacağı transactionlarda readOnly kullanılır.
+    // Propagation.SUPPORTS: Eğer bir transaction var ise o transaction u kullanır,
     // yok ise transaction’sız çalışır. Yeni bir transaction da açmaz
     public List<UserViewDTO> getUsers() {
         return userRepository
@@ -50,7 +50,7 @@ public class UserManager implements IUserService {
                 .orElseThrow(() -> new UserNotFoundException());
         return UserViewDTO.of(user);
         // burada direk User tipinde nesne dönmek yerine user nesnesinin kısıtlanmış
-        // halinin göndermek için UserViewDTO'nun of metodunu kullandık.
+        // halini göndermek için UserViewDTO'nun of metodunu kullandık.
     }
 
     @Override

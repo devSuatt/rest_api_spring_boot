@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 // Sadece kullanıcıya gösterilmesini istediğimiz dataları burada belirtiyoruz.
 // Gösterilmesini istemediğimiz alanları (id, isAdmin, password vs.)
-// Etity (model) katmanında yazıyoruz.
+// Entity (model) katmanında yazıyoruz.
 
 // Lombok sayesinde Getter annotiation yazarak getter metodu yazmadık.
 @Getter

@@ -2,6 +2,7 @@ package com.devsuatt.backend.model;
 
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Getter
+@Setter
 @Table(name = "users")
 public class User {
     @Id
